@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Common/Css/bootstrap.min.css">
+    <script defer src="/Common/Css/bootstrap.min.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Employee/Css/employee.css">
+    <title>E-Commerce</title>
+</head>
+
+<body>
+    <div class="side-nav side-nav-open">
+        <button class="btn text-white fw-bold w-100 b-none" style="font-size: 20px;">
+            <i class="fa fa-shopping-cart float-start mt-2"></i>
+            Stocks Update
+            <i class="fa fa-angle-down float-end mt-2"></i>
+        </button>
+        <ul>
+            <li class="list-group-item">Create Category</li>
+            <li class="list-group-item">Create Brands</li>
+            <li class="list-group-item">Create Products</li>
+        </ul>
+    </div>
+
+    <div class="page page-open">
+        <nav class="navbar bg-white px-3">
+            <button class="menu-btn btn p-2 d-flex align-items-center justify-content-center">
+                <i class="fa fa-align-left"></i>
+            </button>
+        </nav>
+    </div>
+</body>
+
+<script>
+    const togglerFunc = () => {
+        let menuBtn = document.querySelector(".menu-btn");
+        let sideNav = document.querySelector(".side-nav");
+        let page = document.querySelector(".page");
+
+        menuBtn.onclick = () => {
+            let open = sideNav.classList.contains("side-nav-open");
+            if (open) {
+                sideNav.classList.remove("side-nav-open");
+                sideNav.classList.add("side-nav-close");
+                page.classList.remove("page-open");
+                page.classList.add("page-close");
+            } else {
+                sideNav.classList.add("side-nav-open");
+                sideNav.classList.remove("side-nav-close");
+                page.classList.add("page-open");
+                page.classList.remove("page-close");
+            }
+        }
+    }
+    togglerFunc();
+
+</script>
+
+</html>
